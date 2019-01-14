@@ -9,7 +9,7 @@ import (
 
 const (
 	CONST_PREFIX = "angular/dist/angular/"
-	CONST_FILE_TEMPLATE = `package main
+	CONST_FILE_TEMPLATE = `package static
 
 const(
 	%s
@@ -40,9 +40,8 @@ func main() {
 		files = append(
 			files,
 			fmt.Sprintf(
-				`	CONST_SRC_%s = "%s"
-`,
-				strings.ToUpper(item),
+				`	CONST_SRC_%s = "%s"`,
+				strings.Replace(strings.ToUpper(item), ".", "_", -1),
 				base64.StdEncoding.EncodeToString(b),
 			),
 		)
@@ -52,7 +51,7 @@ func main() {
 	fileBytes := []byte(
 		fmt.Sprintf(
 			CONST_FILE_TEMPLATE,
-			files,
+			strings.Join(files, "\n"),
 		),
 	)
 
