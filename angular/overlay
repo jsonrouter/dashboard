@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+ng g component comps/overlays/$1-overlay -m modules/shared

@@ -1,0 +1,53 @@
+@import 'colours'
+.page
+  padding: 0 15px 0 15px
+  min-height: calc(100vh - 56px)
+
+i.material-icons, i.material-icons a, i.material-icons span
+  color: $material-icon-grey
+
+h1, h2, h3, h4, h5, h6
+  color: $text-black
+.warn, .warning
+  color: $warning
+.error
+  color: $youtube
+p.error
+  margin: 0px
+a
+  cursor: pointer
+
+i.material-icons.success
+  color: $success
+i.material-icons.ready
+  color: $success
+i.material-icons.error, i.material-icons.fail
+  color: $youtube
+i.material-icons.loading
+  color: $light-grey
+i.material-icons.white
+  color: white
+a
+  &:hover
+    text-decoration: underline
+h1, h2, h3, h4, h5, h6, p
+  color: $text-black
+  text-align: center
+  .center
+    text-align: center
+h1, h2, h3, h4, h5, h6
+  &.success
+    color: $success
+  &.title
+    text-align: center
+textarea
+  border: 1px solid $grey3
+
+div.tooltip, div.icon-row
+  h1, h2, h3, h4, h5, h6
+    margin: 0px
+    padding: 0px
+  i.material-icons
+    margin-left: 3px
+    cursor: pointer
+

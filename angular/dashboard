@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+ng generate @angular/material:dashboard comps/dashboards/$1-dashboard -m modules/shared

@@ -1,0 +1,18 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="sidenav" fixedInViewport="true" [attr.role]="isHandset ? 'dialog' : 'navigation'" [mode]="isHandset ? 'over' : 'side'" [opened]="!isHandset">
+    <mat-toolbar></mat-toolbar>
+    <mat-nav-list>
+      <button color='primary' mat-button routerLink="/" (click)="close()">Home</button>
+      <button color='primary' mat-button routerLink="/endpoints" (click)="close()">Endpoints</button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="start center">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="sidenav.toggle()" *ngIf="isHandset">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Alex Breadman Dashboard</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

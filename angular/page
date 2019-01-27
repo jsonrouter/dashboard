@@ -1,0 +1,1 @@
+ng g c comps/pages/$1 -m modules/shared

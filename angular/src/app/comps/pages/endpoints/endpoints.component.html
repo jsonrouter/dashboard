@@ -1,0 +1,75 @@
+<div class="page" *ngIf="endpoints">
+
+  <div id="info" *ngIf="endpoints.info as i">
+    <h1 class="title">{{i.title}}</h1>
+    <span class="version">{{i.version}}</span>
+    <p class="description">{{i.description}}</p>
+    <div id="contact" *ngIf="i.contact as c">
+      <p class="contact">{{c.name}}</p>
+      <p class="contact">{{c.email}}</p>
+      <p class="contact">{{c.url}}</p>
+    </div>
+  </div>
+
+  <div id="paths" *ngIf="endpoints.paths as paths">
+    <h4>Routes</h4>
+    <div class="path" *ngFor="let p of keys(paths)">
+      <h5>Route</h5>
+      <span class="path">{{p}}:</span>
+      <div id="requests" *ngFor="let r of keys(endpoints.paths[p])">
+        <span class="request-type">{{r}}:</span>
+
+        <div class="request" *ngIf="endpoints.paths[p][r] as i">
+          <span class="description">{{i.description}}</span>
+          <div id="parameters" *ngIf="i.parameters">
+            <h5>Parameters</h5>
+            <div class="parameter" *ngFor="let param of i.parameters" fxLayout="column" fxLayoutAlign="start start">
+              <span class="name">Name: {{param.name}}</span>
+              <span class="in">In: {{param.in}}</span>
+              <span class="description">Description: {{param.description}}</span>
+            </div>
+          </div>
+          <div id="Produces">
+            <h5>Produces</h5>
+            <span class="produces">{{i.produces}}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+
+<!-- "swagger": "2.0", -->
+<!-- "info": { -->
+<!-- "version": "", -->
+<!-- "title": "This is the exchange&#45;alpha service!", -->
+<!-- "description": "", -->
+<!-- "termsOfService": "", -->
+<!-- "contact": { -->
+<!-- "name": "", -->
+<!-- "email": "alex.breadman@dianomi.com", -->
+<!-- "url": "http://exchange&#45;alpha" -->
+<!-- "license": { -->
+<!-- "name": "", -->
+<!-- "url": "n/a" -->
+<!-- "host": "exchange&#45;alpha&#45;dot&#45;dianomi&#45;openrtb&#45;exchange.appspot.com", -->
+<!-- "schemes": [ -->
+<!-- "http" -->
+<!-- "consumes": [ -->
+<!-- "application/json" -->
+<!-- "produces": [ -->
+<!-- "application/json" -->
+<!-- "paths": {}, -->
+<!-- "definitions": {}, -->
+<!-- "securityDefinitions": { -->
+<!-- "apiKey": { -->
+<!-- "type": "apiKey", -->
+<!-- "in": "header", -->
+<!-- "name": "apikey" -->
+
+<div *ngIf="endpoints as e" class="end">
+  {{e|json}}
+</div>

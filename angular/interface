@@ -1,0 +1,1 @@
+ng generate interface interfaces/$1

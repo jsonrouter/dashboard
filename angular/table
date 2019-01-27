@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+ng generate @angular/material:table comps/tables/$1-table -m modules/shared

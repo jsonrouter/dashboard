@@ -1,0 +1,1 @@
+ng g c comps/dialogs/$1-dialog -m modules/shared

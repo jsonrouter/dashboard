@@ -1,22 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
-import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
-import { LayoutModule } from '@angular/cdk/layout';
-import { TestDragComponent } from './test-drag/test-drag.component';
-import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
+import { SharedModule } from './modules/shared/shared.module'
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule, MatTreeModule, MatToolbarModule, MatSidenavModule, MatListModule } from '@angular/material'
+import { LayoutModule } from '@angular/cdk/layout'
+import { ServiceWorkerModule } from '@angular/service-worker'
+import { environment } from '../environments/environment'
+import { SidebarComponent } from './sidebar/sidebar.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainDashboardComponent,
-    TestDragComponent
+    SidebarComponent,
   ],
   imports: [
+    HttpClientModule,
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -26,7 +28,11 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatIconModule,
     MatButtonModule,
     LayoutModule,
-    DragDropModule
+    MatTreeModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
