@@ -1,4 +1,4 @@
-package main
+package generate
 
 import (
 	"fmt"
@@ -17,7 +17,7 @@ const(
 `
 )
 
-func main() {
+func Generate() {
 
 	list := []string{
 		"favicon.ico",
