@@ -88,6 +88,10 @@ func Generate() {
 		"runtime.js",
 		"styles.css",
 		"manifest.json",
+		"ngsw.json",
+		"ngsw-worker.js",
+		"safety-worker.js",
+		"worker-basic.min.js",
 	}
 	files := []string{}
 	decoders := []string{}
@@ -99,6 +103,13 @@ func Generate() {
 			panic(err)
 		}
 
+		constFilename := strings.Replace(
+			strings.Replace(strings.ToUpper(filename), ".", "_", -1),
+			"-",
+			"_",
+			-1,
+		)
+
 		decoders = append(
 			decoders,
 			fmt.Sprintf(
@@ -109,7 +120,7 @@ func Generate() {
 		self.files["%s"] = &File{newFile}
 	}
 `,
-				strings.Replace(strings.ToUpper(filename), ".", "_", -1),
+				constFilename,
 				filename,
 			),
 		)
@@ -118,7 +129,7 @@ func Generate() {
 			files,
 			fmt.Sprintf(
 				"CONST_SRC_%s = \"%s\"\n",
-				strings.Replace(strings.ToUpper(filename), ".", "_", -1),
+				constFilename,
 				base64.StdEncoding.EncodeToString(b),
 			),
 		)
