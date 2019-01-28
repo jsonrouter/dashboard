@@ -9,10 +9,10 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.2a5612d8fb2dc139ba9d.js",
-        "/polyfills.1ef83d22ada557f4a131.js",
-        "/runtime.ec2944dd8b20ec099bf3.js",
-        "/styles.a1de54c5057e8850dd75.css"
+        "/main.js",
+        "/polyfills.js",
+        "/runtime.js",
+        "/styles.css"
       ],
       "patterns": []
     },
@@ -37,9 +37,9 @@
         "/assets/icons/icon-96x96.png",
         "/assets/languageCodes.json",
         "/assets/languageCodes.txt",
-        "/flag-sprite-small.05fcbdce3f680e5df450.png",
-        "/flag-sprite-square.055c92ad1758a1a73860.png",
-        "/flag-sprite.2c00d21f65e5077a97ae.png"
+        "/flag-sprite-small.png",
+        "/flag-sprite-square.png",
+        "/flag-sprite.png"
       ],
       "patterns": []
     }
@@ -63,14 +63,14 @@
     "/assets/languageCodes.json": "3c3148835786d6d8eb5707c8968f203d95040207",
     "/assets/languageCodes.txt": "d5e4973e4c0b4f2244d06b1666b6c893878ed920",
     "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/flag-sprite-small.05fcbdce3f680e5df450.png": "735fa00d64bd323355633267ed84f178223ebf5f",
-    "/flag-sprite-square.055c92ad1758a1a73860.png": "80be31de2387b402df9fb1d8dc063027a5d215bd",
-    "/flag-sprite.2c00d21f65e5077a97ae.png": "162a2de216de72243ffb4bdeee6d524daca3e19a",
-    "/index.html": "65d1f9aa9479e7d6b1e053b7301257a8e2c615c2",
-    "/main.2a5612d8fb2dc139ba9d.js": "d83cf40f9db9ccc0e3c6d0a9c91f2c37608d1496",
-    "/polyfills.1ef83d22ada557f4a131.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
-    "/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "/styles.a1de54c5057e8850dd75.css": "53aea0c95fd4b3289c118d2b8cd736b6fbe24252"
+    "/flag-sprite-small.png": "735fa00d64bd323355633267ed84f178223ebf5f",
+    "/flag-sprite-square.png": "80be31de2387b402df9fb1d8dc063027a5d215bd",
+    "/flag-sprite.png": "162a2de216de72243ffb4bdeee6d524daca3e19a",
+    "/index.html": "8592b43253e19f606dde058d19d66d1853a5539a",
+    "/main.js": "d83cf40f9db9ccc0e3c6d0a9c91f2c37608d1496",
+    "/polyfills.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
+    "/runtime.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/styles.css": "306f2c8d464bdb85385481d1db06382e33893002"
   },
   "navigationUrls": [
     {
