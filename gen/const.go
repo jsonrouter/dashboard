@@ -14,8 +14,6 @@ func FileList() []string {
 
 func (self *Static) Dashboard(node *tree.Node) {
 
-	node = node.Add("dashboard")
-
 
 	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_FAVICON_ICO); err != nil {
 		panic(err)

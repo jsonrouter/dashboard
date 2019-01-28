@@ -25,8 +25,6 @@ func FileList() []string {
 
 func (self *Static) Dashboard(node *tree.Node) {
 
-	node = node.Add("dashboard")
-
 %s
 
 	for _, filename := range FileList() {
