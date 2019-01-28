@@ -12,7 +12,9 @@ const (
 	CONST_FILE_TEMPLATE = `package static
 
 import (
+	"strings"
 	"encoding/base64"
+	//
 	"github.com/jsonrouter/core/http"
 	"github.com/jsonrouter/core/tree"
 )
@@ -29,11 +31,26 @@ func (self *Static) Dashboard(node *tree.Node) {
 
 	for _, filename := range FileList() {
 
-		node.Add(filename, "$item").GET(
+		node.Add(filename, "$filename").GET(
 			func (req http.Request) *http.Status {
 
+				var contentType string
+				resource := req.Param("$filename").(string)
+				switch strings.Split(resource, ".")[1] {
+					case "ico":
+						contentType = "image/png"
+					case "html":
+						contentType = "text/html"
+					case "js":
+						contentType = "text/javascript"
+					case "css":
+						contentType = "text/css"
+				}
+
+				req.SetHeader("Content-Type", contentType)
+
 				return req.Respond(
-					self.files[req.Param("$item").(string)].Cache,
+					self.files[resource].Cache,
 				)
 			},
 		).Description(
