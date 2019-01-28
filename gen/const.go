@@ -77,6 +77,12 @@ func (self *Static) Dashboard(node *tree.Node) {
 
 				req.SetHeader("Content-Type", contentType)
 
+req.Log().Debugf(
+				"Serving Dashboard file: %s with MimeType: %s",
+				resource,
+				req.GetHeader("Content-Type"),
+			)
+
 				return req.Respond(
 					self.files[resource].Cache,
 				)
