@@ -61,7 +61,8 @@ func (self *Static) Dashboard(node *tree.Node) {
 
 				var contentType string
 				resource := req.Param("$filename").(string)
-				switch strings.Split(resource, ".")[1] {
+				ext := strings.Split(resource, ".")[1]
+				switch ext {
 					case "ico":
 						contentType = "image/png"
 					case "html":
@@ -70,6 +71,8 @@ func (self *Static) Dashboard(node *tree.Node) {
 						contentType = "text/javascript"
 					case "css":
 						contentType = "text/css"
+					default:
+						panic("MIME TYPE NOT RECOGNISED: "+ext)
 				}
 
 				req.SetHeader("Content-Type", contentType)
