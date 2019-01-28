@@ -13,7 +13,12 @@ export class EndpointService {
   ) { }
 
   getEndpoints(): Observable<any> {
-    const url = env.environment.apiEndpoint + '/openapi.spec.json'
+    const url = '/openapi.spec.json'
+    return this.http.get(url)
+  }
+
+  getLocal(): Observable<any> {
+    const url = '../../endpoints.json'
     return this.http.get(url)
   }
 }
