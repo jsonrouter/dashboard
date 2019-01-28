@@ -27,8 +27,6 @@ func (self *Static) Dashboard(node *tree.Node) {
 
 	for _, filename := range FileList() {
 
-		var err error
-		var newFile []byte
 		%s
 
 		node.Add(filename, "$item").GET(
@@ -75,11 +73,11 @@ func Generate() {
 			decoders,
 			fmt.Sprintf(
 `
-	newFile, err = base64.StdEncoding.DecodeString(CONST_SRC_%s)
-	if err != nil {
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_%s); err != nil {
 		panic(err)
+	} else {
+		self.files["%s"] = &File{newFile}
 	}
-	self.files["%s"] = &File{newFile}
 `,
 				strings.Replace(strings.ToUpper(filename), ".", "_", -1),
 				filename,

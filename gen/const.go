@@ -16,44 +16,42 @@ func (self *Static) Dashboard(node *tree.Node) {
 
 	for _, filename := range FileList() {
 
-		var err error
-		var newFile []byte
 		
-	newFile, err = base64.StdEncoding.DecodeString(CONST_SRC_FAVICON_ICO)
-	if err != nil {
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_FAVICON_ICO); err != nil {
 		panic(err)
+	} else {
+		self.files["favicon.ico"] = &File{newFile}
 	}
-	self.files["favicon.ico"] = &File{newFile}
 
-	newFile, err = base64.StdEncoding.DecodeString(CONST_SRC_INDEX_HTML)
-	if err != nil {
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_INDEX_HTML); err != nil {
 		panic(err)
+	} else {
+		self.files["index.html"] = &File{newFile}
 	}
-	self.files["index.html"] = &File{newFile}
 
-	newFile, err = base64.StdEncoding.DecodeString(CONST_SRC_MAIN_JS)
-	if err != nil {
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_MAIN_JS); err != nil {
 		panic(err)
+	} else {
+		self.files["main.js"] = &File{newFile}
 	}
-	self.files["main.js"] = &File{newFile}
 
-	newFile, err = base64.StdEncoding.DecodeString(CONST_SRC_POLYFILLS_JS)
-	if err != nil {
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_POLYFILLS_JS); err != nil {
 		panic(err)
+	} else {
+		self.files["polyfills.js"] = &File{newFile}
 	}
-	self.files["polyfills.js"] = &File{newFile}
 
-	newFile, err = base64.StdEncoding.DecodeString(CONST_SRC_RUNTIME_JS)
-	if err != nil {
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_RUNTIME_JS); err != nil {
 		panic(err)
+	} else {
+		self.files["runtime.js"] = &File{newFile}
 	}
-	self.files["runtime.js"] = &File{newFile}
 
-	newFile, err = base64.StdEncoding.DecodeString(CONST_SRC_STYLES_CSS)
-	if err != nil {
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_STYLES_CSS); err != nil {
 		panic(err)
+	} else {
+		self.files["styles.css"] = &File{newFile}
 	}
-	self.files["styles.css"] = &File{newFile}
 
 
 		node.Add(filename, "$item").GET(
