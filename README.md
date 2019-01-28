@@ -1,2 +1,0 @@
-# dashboard
-JSONrouter Admin Dashboard

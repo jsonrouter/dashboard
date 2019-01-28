@@ -146,6 +146,8 @@ func (self *Static) Dashboard(node *tree.Node) {
 				resource := req.Param("$filename").(string)
 				ext := strings.Split(resource, ".")[1]
 				switch ext {
+					case "png":
+						contentType = "image/png"
 					case "ico":
 						contentType = "image/png"
 					case "html":
