@@ -1,0 +1,93 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.2a5612d8fb2dc139ba9d.js",
+        "/polyfills.1ef83d22ada557f4a131.js",
+        "/runtime.ec2944dd8b20ec099bf3.js",
+        "/styles.a1de54c5057e8850dd75.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/api.html",
+        "/assets/endpoints.json",
+        "/assets/flag-sprite-small.png",
+        "/assets/flag-sprite-square.png",
+        "/assets/flag-sprite.png",
+        "/assets/flags-sprite.png",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/languageCodes.json",
+        "/assets/languageCodes.txt",
+        "/flag-sprite-small.05fcbdce3f680e5df450.png",
+        "/flag-sprite-square.055c92ad1758a1a73860.png",
+        "/flag-sprite.2c00d21f65e5077a97ae.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/api.html": "fd94ba256718d7dff7a97743ab88fa793d335f66",
+    "/assets/endpoints.json": "504eb252a554b3087a0df8b4864647c602b29bf6",
+    "/assets/flag-sprite-small.png": "735fa00d64bd323355633267ed84f178223ebf5f",
+    "/assets/flag-sprite-square.png": "80be31de2387b402df9fb1d8dc063027a5d215bd",
+    "/assets/flag-sprite.png": "162a2de216de72243ffb4bdeee6d524daca3e19a",
+    "/assets/flags-sprite.png": "eeab93dd9dd0b7e1c8f81f97ad613fa8099124d2",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/languageCodes.json": "3c3148835786d6d8eb5707c8968f203d95040207",
+    "/assets/languageCodes.txt": "d5e4973e4c0b4f2244d06b1666b6c893878ed920",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/flag-sprite-small.05fcbdce3f680e5df450.png": "735fa00d64bd323355633267ed84f178223ebf5f",
+    "/flag-sprite-square.055c92ad1758a1a73860.png": "80be31de2387b402df9fb1d8dc063027a5d215bd",
+    "/flag-sprite.2c00d21f65e5077a97ae.png": "162a2de216de72243ffb4bdeee6d524daca3e19a",
+    "/index.html": "65d1f9aa9479e7d6b1e053b7301257a8e2c615c2",
+    "/main.2a5612d8fb2dc139ba9d.js": "d83cf40f9db9ccc0e3c6d0a9c91f2c37608d1496",
+    "/polyfills.1ef83d22ada557f4a131.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
+    "/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/styles.a1de54c5057e8850dd75.css": "53aea0c95fd4b3289c118d2b8cd736b6fbe24252"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

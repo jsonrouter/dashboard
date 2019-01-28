@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'https://exchange-alpha-dot-dianomi-openrtb-exchange.appspot.com/openapi.spec.json',
-};
+  apiEndpoint: 'https://platform-supply-dot-dianomi-openrtb-exchange.appspot.com/openapi.spec.json',
+}
 
 /*
  * For easier debugging in development mode, you can import the following file
