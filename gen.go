@@ -49,6 +49,8 @@ func (self *Static) Dashboard(node *tree.Node) {
 						contentType = "text/html"
 					case "js":
 						contentType = "text/javascript"
+					case "json":
+						contentType = "application/json"
 					case "css":
 						contentType = "text/css"
 					default:
@@ -85,6 +87,7 @@ func Generate() {
 		"polyfills.js",
 		"runtime.js",
 		"styles.css",
+		"manifest.json",
 	}
 	files := []string{}
 	decoders := []string{}
