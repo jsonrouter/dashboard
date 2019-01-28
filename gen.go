@@ -73,11 +73,11 @@ func Generate() {
 			decoders,
 			fmt.Sprintf(
 `
-	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_%s); err != nil {
-		panic(err)
-	} else {
-		self.files["%s"] = &File{newFile}
-	}
+		if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_%s); err != nil {
+			panic(err)
+		} else {
+			self.files["%s"] = &File{newFile}
+		}
 `,
 				strings.Replace(strings.ToUpper(filename), ".", "_", -1),
 				filename,
