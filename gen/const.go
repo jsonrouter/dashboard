@@ -15,41 +15,41 @@ func (self *Static) Dashboard(node *tree.Node) {
 	node = node.Add("dashboard")
 
 
-		if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_FAVICON_ICO); err != nil {
-			panic(err)
-		} else {
-			self.files["favicon.ico"] = &File{newFile}
-		}
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_FAVICON_ICO); err != nil {
+		panic(err)
+	} else {
+		self.files["favicon.ico"] = &File{newFile}
+	}
 
-		if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_INDEX_HTML); err != nil {
-			panic(err)
-		} else {
-			self.files["index.html"] = &File{newFile}
-		}
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_INDEX_HTML); err != nil {
+		panic(err)
+	} else {
+		self.files["index.html"] = &File{newFile}
+	}
 
-		if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_MAIN_JS); err != nil {
-			panic(err)
-		} else {
-			self.files["main.js"] = &File{newFile}
-		}
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_MAIN_JS); err != nil {
+		panic(err)
+	} else {
+		self.files["main.js"] = &File{newFile}
+	}
 
-		if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_POLYFILLS_JS); err != nil {
-			panic(err)
-		} else {
-			self.files["polyfills.js"] = &File{newFile}
-		}
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_POLYFILLS_JS); err != nil {
+		panic(err)
+	} else {
+		self.files["polyfills.js"] = &File{newFile}
+	}
 
-		if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_RUNTIME_JS); err != nil {
-			panic(err)
-		} else {
-			self.files["runtime.js"] = &File{newFile}
-		}
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_RUNTIME_JS); err != nil {
+		panic(err)
+	} else {
+		self.files["runtime.js"] = &File{newFile}
+	}
 
-		if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_STYLES_CSS); err != nil {
-			panic(err)
-		} else {
-			self.files["styles.css"] = &File{newFile}
-		}
+	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_STYLES_CSS); err != nil {
+		panic(err)
+	} else {
+		self.files["styles.css"] = &File{newFile}
+	}
 
 
 	for _, filename := range FileList() {
@@ -58,7 +58,7 @@ func (self *Static) Dashboard(node *tree.Node) {
 			func (req http.Request) *http.Status {
 
 				return req.Respond(
-					self.files[filename].Cache,
+					self.files[req.Param("$item").(string)].Cache,
 				)
 			},
 		).Description(
