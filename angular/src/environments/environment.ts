@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'https://platform-supply-dot-dianomi-openrtb-exchange.appspot.com/openapi.spec.json',
+  apiEndpoint: 'http://localhost:90/assets/endpoints.json',
 }
 
 /*
