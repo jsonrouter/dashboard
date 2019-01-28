@@ -25,9 +25,9 @@ func (self *Static) Dashboard(node *tree.Node) {
 
 	node = node.Add("dashboard")
 
-	for _, filename := range FileList() {
+%s
 
-		%s
+	for _, filename := range FileList() {
 
 		node.Add(filename, "$item").GET(
 			func (req http.Request) *http.Status {

@@ -14,9 +14,7 @@ func (self *Static) Dashboard(node *tree.Node) {
 
 	node = node.Add("dashboard")
 
-	for _, filename := range FileList() {
 
-		
 		if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_FAVICON_ICO); err != nil {
 			panic(err)
 		} else {
@@ -53,6 +51,8 @@ func (self *Static) Dashboard(node *tree.Node) {
 			self.files["styles.css"] = &File{newFile}
 		}
 
+
+	for _, filename := range FileList() {
 
 		node.Add(filename, "$item").GET(
 			func (req http.Request) *http.Status {
