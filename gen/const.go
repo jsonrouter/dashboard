@@ -14,6 +14,13 @@ func FileList() []string {
 
 func (self *Static) Dashboard(node *tree.Node) {
 
+	node.SetHeaders(
+		map[string]interface{}{
+			"Access-Control-Allow-Headers": "Authorization,Content-Type",
+			"Access-Control-Allow-Origin": "*",
+		},
+	)
+
 
 	if newFile, err := base64.StdEncoding.DecodeString(CONST_SRC_FAVICON_ICO); err != nil {
 		panic(err)

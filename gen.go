@@ -25,6 +25,13 @@ func FileList() []string {
 
 func (self *Static) Dashboard(node *tree.Node) {
 
+	node.SetHeaders(
+		map[string]interface{}{
+			"Access-Control-Allow-Headers": "Authorization,Content-Type",
+			"Access-Control-Allow-Origin": "*",
+		},
+	)
+
 %s
 
 	for _, filename := range FileList() {
