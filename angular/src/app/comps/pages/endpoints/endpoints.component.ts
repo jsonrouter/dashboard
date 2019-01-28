@@ -12,23 +12,13 @@ export class EndpointsComponent implements OnInit {
   constructor(
     private end: EndpointService,
   ) {
-    this.end.getLocalEndpoints()
+    this.end.getEndpoints()
       .subscribe((data) => {
         console.log(data)
         this.endpoints = data
+      }, (error) => {
+        console.error('could not get the endpoints', error.error)
       })
-    // this.end.getEndpoints()
-    //   .subscribe((data) => {
-    //     console.log(data)
-    //     this.endpoints = data
-    //   }, (error) => {
-    //     console.error('could not get the endpoints', error.error)
-    //     this.end.getLocalEndpoints()
-    //       .subscribe((data) => {
-    //         console.log('got local endpoint', data)
-    //         this.endpoints = data
-    //       })
-    //   })
   }
 
   keys(obj): Array<string> {

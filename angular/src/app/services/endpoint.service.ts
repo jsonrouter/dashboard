@@ -16,9 +16,4 @@ export class EndpointService {
     const url = env.environment.apiEndpoint
     return this.http.get(url)
   }
-
-  getLocalEndpoints(): Observable<any> {
-    const url = '../../assets/endpoints.json'
-    return this.http.get(url)
-  }
 }
