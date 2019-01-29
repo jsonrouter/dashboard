@@ -59,9 +59,7 @@ func (self *Static) Dashboard(node *tree.Node) {
 						panic("MIME TYPE NOT RECOGNISED: "+ext)
 				}
 
-				req.SetHeader("Content-Type", contentType)
-
-%s
+				req.SetResponseHeader("Content-Type", contentType)
 
 				return req.Respond(
 					self.files[resource].Cache,
@@ -152,11 +150,6 @@ func Generate() {
 			CONST_FILE_TEMPLATE,
 			strings.Join(fileList, `", "`),
 			strings.Join(decoders, ""),
-`req.Log().Debugf(
-				"Serving Dashboard file: %s with MimeType: %s",
-				resource,
-				req.GetHeader("Content-Type"),
-			)`,
 			strings.Join(files, ""),
 		),
 	)
